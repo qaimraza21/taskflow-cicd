@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>TaskFlow - Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="dashboard-body">
+    <nav class="top-nav">
+        <div class="brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+            </svg>
+            <span>TaskFlow</span>
+        </div>
+        <div class="nav-links">
+            <a href="index.html" class="active">Dashboard</a>
+            <a href="task-list.html">Tasks</a>
+            <a href="add-task.html">New Task</a>
+            <a href="task-detail.html">Task Detail</a>
+            <a href="about.html">About</a>
+        </div>
+        <div class="user-profile">
+            <div class="avatar" title="User Profile">U</div>
+        </div>
+    </nav>
+
+    <main class="dashboard-main">
+        <header class="dashboard-header">
+            <div class="header-content">
+                <h1>Good Morning! 👋</h1>
+                <p>Here's a quick overview of your working board today.</p>
+            </div>
+            <a href="add-task.html" class="btn btn-primary shadow-btn">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="12" y1="5" x2="12" y2="19"></line>
+                    <line x1="5" y1="12" x2="19" y2="12"></line>
+                </svg>
+                New Task
+            </a>
+        </header>
+
+        <section class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-icon" style="background:#eff6ff; color:#3b82f6;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                        <line x1="16" y1="2" x2="16" y2="6"></line>
+                        <line x1="8" y1="2" x2="8" y2="6"></line>
+                        <line x1="3" y1="10" x2="21" y2="10"></line>
+                    </svg>
+                </div>
+                <div class="stat-details">
+                    <h3>Total Tasks</h3>
+                    <div class="stat-value">12</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background:#fefce8; color:#eab308;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <polyline points="12 6 12 12 16 14"></polyline>
+                    </svg>
+                </div>
+                <div class="stat-details">
+                    <h3>In Progress</h3>
+                    <div class="stat-value">7</div>
+                </div>
+            </div>
+
+            <div class="stat-card">
+                <div class="stat-icon" style="background:#f0fdf4; color:#22c55e;">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M22 11.08V12a10 10 10 0 1-5.93-9.14"></path>
+                        <polyline points="22 4 12 14.01 9 11.01"></polyline>
+                    </svg>
+                </div>
+                <div class="stat-details">
+                    <h3>Completed</h3>
+                    <div class="stat-value">5</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="recent-activity">
+            <div class="section-header">
+                <h2>Recent Activity</h2>
+                <a href="task-list.html" class="btn btn-ghost">View All Tasks &rarr;</a>
+            </div>
+            <div class="activity-list">
+                <div class="activity-item">
+                    <div class="activity-info">
+                        <h4>Revamp dashboard UI</h4>
+                        <span class="muted">Due Tomorrow &bull; UI/UX</span>
+                    </div>
+                    <span class="badge in-progress-badge">In Progress</span>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-info">
+                        <h4>Migrate database to PostgreSQL</h4>
+                        <span class="muted">Due in 3 days &bull; Backend</span>
+                    </div>
+                    <span class="badge pending-badge">Pending</span>
+                </div>
+                <div class="activity-item">
+                    <div class="activity-info">
+                        <h4>Containerize application</h4>
+                        <span class="muted">Completed yesterday &bull; DevOps</span>
+                    </div>
+                    <span class="badge completed-badge">Completed</span>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>
