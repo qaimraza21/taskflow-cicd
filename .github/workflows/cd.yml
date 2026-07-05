@@ -14,9 +14,9 @@ jobs:
     - name: Checkout Code
       uses: actions/checkout@v4
 
-      name: Trigger Render Deploy
+    - name: Trigger Render Deploy
       run: |
         curl -x POST "{{secrets.RENDER_HOOK}}"
       
-      name: Confirm Deployment
+    - name: Confirm Deployment
       run: echo "Deployment triggered successfully at ${date}"
