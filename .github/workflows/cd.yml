@@ -9,14 +9,13 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     environment: development
-  
-  steps:
-    - name: Checkout Code
-      uses: actions/checkout@v4
 
-    - name: Trigger Render Deploy
-      run: |
-        curl -x POST "{{secrets.RENDER_HOOK}}"
-      
-    - name: Confirm Deployment
-      run: echo "Deployment triggered successfully at ${date}"
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Trigger Render Deploy
+        run: curl -X POST "${{ secrets.RENDER_DEPLOY_HOOK_URL }}"
+
+      - name: Confirm Deployment
+        run: echo "Deployment triggered successfully at $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
